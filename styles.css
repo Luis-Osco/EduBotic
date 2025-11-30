@@ -1,0 +1,235 @@
+/* ==========================
+   ESTILOS GENERALES EDUBOTIC
+   ========================== */
+
+body {
+    font-family: "Poppins", sans-serif;
+    background: #f8f9fa;
+    overflow-x: hidden;
+}
+
+h1, h2, h3, h4, h5 {
+    font-weight: 700;
+}
+
+p {
+    font-size: 16px;
+}
+
+img {
+    max-width: 100%;
+}
+
+/* NAVBAR */
+.logo-nav {
+    height: 55px;
+}
+
+.nav-link {
+    font-size: 16px;
+    margin-left: 10px;
+    font-weight: 500;
+    color: #1C1C1C !important;
+}
+
+.nav-link.active {
+    color: #1C4E80 !important;
+}
+
+/* ==========================
+   HERO SECTIONS
+   ========================== */
+
+.hero,
+.hero-sobre,
+.hero-cursos,
+.hero-productos,
+.hero-trabajos,
+.hero-contacto {
+    min-height: 90vh;
+    padding-top: 120px;
+}
+
+.hero-title {
+    font-size: 48px;
+    font-weight: 800;
+    color: #1C4E80;
+}
+
+.hero-text {
+    font-size: 18px;
+    margin-bottom: 25px;
+}
+
+/* HERO BACKGROUNDS */
+.hero-trabajos {
+    background: linear-gradient(#00000080, #00000080), url('hero-trabajos.jpg');
+    background-size: cover;
+    background-position: center;
+    padding: 140px 0;
+}
+
+.hero-contacto {
+    background: linear-gradient(#1C4E8080, #1C4E8080), url('hero-contacto.jpg');
+    background-size: cover;
+    background-position: center;
+    padding: 140px 0;
+}
+
+/* ==========================
+   TARJETAS GENERALES
+   ========================== */
+
+.servicio-card,
+.curso-card,
+.producto-card,
+.trabajo-card,
+.contact-card,
+.valor-card {
+    border-radius: 12px;
+    overflow: hidden;
+    transition: 0.3s;
+}
+
+.servicio-card:hover,
+.curso-card:hover,
+.producto-card:hover,
+.trabajo-card:hover,
+.valor-card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 10px 25px rgba(0,0,0,0.15);
+}
+
+/* ÍCONOS DE VALORES */
+.valor-icon {
+    width: 70px;
+}
+
+.stars {
+    color: gold;
+    font-size: 20px;
+}
+
+/* ==========================
+   EQUIPO
+   ========================== */
+
+.equipo-card {
+    background: #ffffff15;
+    padding: 20px;
+    border-radius: 12px;
+    backdrop-filter: blur(5px);
+}
+
+.equipo-img {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 3px solid white;
+}
+
+/* ==========================
+   BOTONES
+   ========================== */
+
+.btn-primary {
+    background: #1C4E80;
+    border: none;
+}
+
+.btn-warning {
+    background: #FFC107;
+    border: none;
+    color: #1C1C1C;
+}
+
+.btn-success {
+    background: #28A745;
+    border: none;
+}
+
+.btn-primary:hover,
+.btn-warning:hover,
+.btn-success:hover {
+    opacity: 0.9;
+}
+
+/* ==========================
+   FILTROS
+   ========================== */
+
+.filter-btn {
+    margin: 5px;
+    font-size: 15px;
+}
+
+.filter-btn.active {
+    background: #1C4E80;
+    color: white;
+}
+
+/* FILTRO CARD */
+.filtro-card {
+    border-radius: 12px;
+    background: white;
+}
+
+/* ==========================
+   FORMULARIO DE CONTACTO
+   ========================== */
+
+form input,
+form textarea {
+    border-radius: 10px;
+    border: 1px solid #ddd;
+    padding: 12px;
+}
+
+form button {
+    border-radius: 10px;
+    font-size: 18px;
+}
+
+/* ICONOS CONTACTO */
+.contact-icon {
+    width: 60px;
+}
+
+/* ==========================
+   FOOTER
+   ========================== */
+
+.footer {
+    background: #1C1C1C;
+    color: white;
+}
+
+.footer-logo {
+    width: 160px;
+}
+
+.footer a {
+    color: #ffffff;
+    margin: 0 12px;
+}
+
+.footer a:hover {
+    color: #FFC107;
+}
+
+/* ==========================
+   ANIMACIONES / EFECTOS
+   ========================== */
+
+.trabajo-card img,
+.producto-card img,
+.curso-card img {
+    transition: 0.3s;
+}
+
+.trabajo-card:hover img,
+.producto-card:hover img,
+.curso-card:hover img {
+    transform: scale(1.05);
+}
