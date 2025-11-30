@@ -5,35 +5,48 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Contacto - EduBotic</title>
 
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Fuentes -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+
+    <!-- Bootstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Iconos -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+
+    <!-- Estilos -->
     <link rel="stylesheet" href="styles.css">
 </head>
+
 
 <body>
 
 <!-- NAVBAR -->
-<nav class="navbar navbar-expand-lg bg-white shadow-sm py-2 fixed-top">
-    <div class="container">
+<nav class="navbar navbar-expand-lg fixed-top custom-nav">
+    <div class="container py-2">
 
-        <a class="navbar-brand" href="index.html">
-            <img src="logo.png" class="logo-nav" alt="EduBotic Logo">
+        <a class="navbar-brand d-flex align-items-center fw-bold" href="index.html">
+            <img src="logo.png" class="logo-nav me-2">
+            EduBotic
         </a>
 
         <button class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#nav">
             <span class="navbar-toggler-icon"></span>
         </button>
 
-        <div class="collapse navbar-collapse" id="nav">
-            <ul class="navbar-nav ms-auto">
-                <li class="nav-item"><a href="index.html" class="nav-link">Inicio</a></li>
-                <li class="nav-item"><a href="productos.html" class="nav-link">Robots</a></li>
-                <li class="nav-item"><a href="cursos.html" class="nav-link">Cursos</a></li>
-                <li class="nav-item"><a href="sobre-nosotros.html" class="nav-link">Sobre Nosotros</a></li>
-                <li class="nav-item"><a href="contacto.html" class="nav-link active">Contacto</a></li>
+        <div class="collapse navbar-collapse text-center" id="nav">
+            <ul class="navbar-nav ms-auto gap-3">
+                <li class="nav-item"><a class="nav-link" href="index.html">Inicio</a></li>
+                <li class="nav-item"><a class="nav-link" href="robots.html">Robots</a></li>
+                <li class="nav-item"><a class="nav-link" href="cursos.html">Cursos</a></li>
+                <li class="nav-item"><a class="nav-link" href="trabajos-web.html">Trabajos Web</a></li>
+                <li class="nav-item"><a class="nav-link" href="sobre-nosotros.html">Sobre Nosotros</a></li>
+                <li class="nav-item"><a class="nav-link active" href="contacto.html">Contacto</a></li>
             </ul>
 
-            <a href="https://wa.me/59170000000" class="btn btn-success ms-3">
-                WhatsApp
+            <!-- WhatsApp -->
+            <a href="https://wa.me/59162456246" class="btn btn-whatsapp ms-lg-4">
+                <i class="bi bi-whatsapp me-1"></i> WhatsApp
             </a>
         </div>
 
@@ -42,76 +55,89 @@
 
 
 <!-- HERO -->
-<section class="hero-contacto d-flex align-items-center text-white text-center">
+<header class="hero-contact page-hero d-flex align-items-center text-white text-center">
     <div class="container">
-        <h1 class="hero-title">¡Hablemos Hoy!</h1>
-        <p class="hero-text">Estamos listos para ayudarte con cursos, robots y servicios web.</p>
+        <h1 class="hero-title">Contáctanos</h1>
+        <p class="hero-subtitle">Estamos aquí para ayudarte con cursos, robots o proyectos web.</p>
     </div>
-</section>
+</header>
 
 
-<!-- INFO DE CONTACTO -->
-<section class="info-contacto py-5">
+
+<!-- INFO CONTACTO -->
+<section class="contact-section py-5">
     <div class="container">
+
+        <h2 class="section-title text-center mb-5">Información de Contacto</h2>
+
         <div class="row g-4">
 
             <div class="col-md-4">
-                <div class="contact-card shadow-sm text-center p-4">
-                    <img src="icon-phone.png" class="contact-icon mb-3">
+                <div class="contact-card2">
+                    <div class="contact-icon2 bg-primary"><i class="bi bi-telephone"></i></div>
                     <h5>Teléfono</h5>
-                    <p>+591 70000000</p>
+                    <p>+591 62456246</p>
                 </div>
             </div>
 
             <div class="col-md-4">
-                <div class="contact-card shadow-sm text-center p-4">
-                    <img src="icon-mail.png" class="contact-icon mb-3">
-                    <h5>Correo</h5>
+                <div class="contact-card2">
+                    <div class="contact-icon2 bg-success"><i class="bi bi-envelope"></i></div>
+                    <h5>Correo Electrónico</h5>
                     <p>edubotic@gmail.com</p>
                 </div>
             </div>
 
             <div class="col-md-4">
-                <div class="contact-card shadow-sm text-center p-4">
-                    <img src="icon-map.png" class="contact-icon mb-3">
+                <div class="contact-card2">
+                    <div class="contact-icon2 bg-warning text-dark"><i class="bi bi-geo-alt"></i></div>
                     <h5>Ubicación</h5>
-                    <p>La Paz – El Alto, Bolivia</p>
+                    <p>La Paz — El Alto, Bolivia</p>
                 </div>
             </div>
 
         </div>
+
     </div>
 </section>
 
 
+
 <!-- FORMULARIO -->
-<section class="formulario py-5 bg-light">
+<section class="py-5">
     <div class="container">
-        <h2 class="text-center mb-4">Envíanos un Mensaje</h2>
+
+        <h2 class="section-title text-center mb-5">Envíanos un Mensaje</h2>
 
         <div class="row justify-content-center">
-            <div class="col-lg-8">
+            <div class="col-lg-7">
 
-                <form class="shadow p-4 rounded bg-white">
+                <div class="form-box shadow-lg p-4 rounded-4 bg-white">
 
-                    <div class="mb-3">
-                        <label class="form-label">Nombre Completo</label>
-                        <input type="text" class="form-control" placeholder="Ingresa tu nombre">
-                    </div>
+                    <form id="contactForm">
 
-                    <div class="mb-3">
-                        <label class="form-label">Correo Electrónico</label>
-                        <input type="email" class="form-control" placeholder="Ingresa tu correo">
-                    </div>
+                        <div class="mb-3">
+                            <label class="form-label">Nombre Completo</label>
+                            <input type="text" class="form-control input-modern" placeholder="Tu nombre" required>
+                        </div>
 
-                    <div class="mb-3">
-                        <label class="form-label">Mensaje</label>
-                        <textarea class="form-control" rows="5" placeholder="Escribe tu mensaje"></textarea>
-                    </div>
+                        <div class="mb-3">
+                            <label class="form-label">Correo Electrónico</label>
+                            <input type="email" class="form-control input-modern" placeholder="Tu correo" required>
+                        </div>
 
-                    <button type="submit" class="btn btn-primary w-100 py-2">Enviar Mensaje</button>
+                        <div class="mb-3">
+                            <label class="form-label">Mensaje</label>
+                            <textarea class="form-control input-modern" rows="5" placeholder="Escribe tu mensaje" required></textarea>
+                        </div>
 
-                </form>
+                        <button type="submit" class="btn btn-primary w-100 btn-lg">
+                            Enviar Mensaje
+                        </button>
+
+                    </form>
+
+                </div>
 
             </div>
         </div>
@@ -120,37 +146,40 @@
 </section>
 
 
-<!-- GOOGLE MAP -->
-<section>
+
+<!-- MAPA -->
+<section class="mapa-section">
     <iframe 
-        src="https://maps.google.com/maps?q=La%20Paz%20Bolivia&t=&z=13&ie=UTF8&iwloc=&output=embed" 
+        src="https://maps.google.com/maps?q=La%20Paz%20Bolivia&t=&z=13&output=embed"
         width="100%" 
         height="400" 
         style="border:0;" 
-        allowfullscreen 
         loading="lazy">
     </iframe>
 </section>
 
 
+
 <!-- FOOTER -->
 <footer class="footer py-4">
     <div class="container text-center">
-        <img src="logo-footer.png" class="footer-logo mb-3" alt="Logo Edubotic">
 
-        <div class="nav justify-content-center">
-            <a href="index.html" class="nav-link">Inicio</a>
-            <a href="productos.html" class="nav-link">Robots</a>
-            <a href="cursos.html" class="nav-link">Cursos</a>
-            <a href="sobre-nosotros.html" class="nav-link">Sobre Nosotros</a>
+        <img src="logo-footer.png" class="footer-logo mb-3">
+
+        <div class="d-flex justify-content-center gap-4">
+            <a href="index.html">Inicio</a>
+            <a href="robots.html">Robots</a>
+            <a href="cursos.html">Cursos</a>
+            <a href="sobre-nosotros.html">Sobre Nosotros</a>
         </div>
 
-        <p class="mt-3">© 2025 EduBotic - Innovación para el Futuro</p>
+        <p class="mt-3">© 2025 EduBotic — Innovación para el Futuro</p>
+
     </div>
 </footer>
 
 
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
 <script src="script.js"></script>
 
 </body>

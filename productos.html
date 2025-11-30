@@ -5,35 +5,48 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Robots - EduBotic</title>
 
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Fuentes -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+
+    <!-- Bootstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Iconos -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+
+    <!-- Estilos -->
     <link rel="stylesheet" href="styles.css">
 </head>
 
 <body>
 
 <!-- NAVBAR -->
-<nav class="navbar navbar-expand-lg bg-white shadow-sm py-2 fixed-top">
-    <div class="container">
+<nav class="navbar navbar-expand-lg fixed-top custom-nav">
+    <div class="container py-2">
 
-        <a class="navbar-brand" href="index.html">
-            <img src="logo.png" class="logo-nav" alt="EduBotic Logo">
+        <a class="navbar-brand d-flex align-items-center fw-bold" href="index.html">
+            <img src="img/logo.png" class="logo-nav me-2">
+            EduBotic
         </a>
 
         <button class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#nav">
             <span class="navbar-toggler-icon"></span>
         </button>
 
-        <div class="collapse navbar-collapse" id="nav">
-            <ul class="navbar-nav ms-auto">
-                <li class="nav-item"><a href="index.html" class="nav-link">Inicio</a></li>
-                <li class="nav-item"><a href="productos.html" class="nav-link active">Robots</a></li>
-                <li class="nav-item"><a href="cursos.html" class="nav-link">Cursos</a></li>
-                <li class="nav-item"><a href="sobre-nosotros.html" class="nav-link">Sobre Nosotros</a></li>
-                <li class="nav-item"><a href="contacto.html" class="nav-link">Contacto</a></li>
+        <div class="collapse navbar-collapse text-center" id="nav">
+            <ul class="navbar-nav ms-auto gap-3">
+                <li class="nav-item"><a class="nav-link" href="index.html">Inicio</a></li>
+                <li class="nav-item"><a class="nav-link active" href="productos.html">Robots</a></li>
+                <li class="nav-item"><a class="nav-link" href="cursos.html">Cursos</a></li>
+                <li class="nav-item"><a class="nav-link" href="trabajos-web.html">Trabajos Web</a></li>
+                <li class="nav-item"><a class="nav-link" href="sobre-nosotros.html">Sobre Nosotros</a></li>
+                <li class="nav-item"><a class="nav-link" href="contacto.html">Contacto</a></li>
             </ul>
 
-            <a href="https://wa.me/59170000000" class="btn btn-success ms-3">
-                WhatsApp
+
+            <!-- WhatsApp -->
+            <a href="https://wa.me/59162456246" class="btn btn-whatsapp ms-3">
+                <i class="bi bi-whatsapp me-1"></i> WhatsApp
             </a>
         </div>
 
@@ -41,21 +54,138 @@
 </nav>
 
 
+
 <!-- HERO -->
-<section class="hero-productos d-flex align-items-center">
+<header class="hero-productos2 d-flex align-items-center text-white text-center">
     <div class="container">
-        <div class="row align-items-center">
+        <h1 class="hero-title">Robots Educativos</h1>
+        <p class="hero-subtitle">Arduino • ESP32 • Robots Digitales</p>
+    </div>
+</header>
 
-            <div class="col-lg-6">
-                <h1 class="hero-title">¡Construye, Crea, Programa e Imagina!</h1>
-                <p class="hero-text">Descubre nuestros kits educativos de robótica y tecnología.</p>
 
-                <a href="productos.html" class="btn btn-primary btn-lg">Explora Robots</a>
-                <a href="cursos.html" class="btn btn-warning btn-lg ms-2">Explora Cursos</a>
+
+
+
+
+<!-- LISTA DE PRODUCTOS -->
+<section class="productos-section py-5">
+    <div class="container">
+        <div class="row g-4" id="productosLista">
+
+            <!-- =======================================================
+                 3 ROBOTS ARDUINO
+            ======================================================== -->
+            <div class="col-md-4 producto-item" data-category="arduino">
+                <div class="product-card">
+                    <img src="img/araña.png" class="product-img">
+                    <h5 class="mt-2">Araña Robot BT</h5>
+                    <p>Ideal para empezar con motores y articulaciones.</p>
+                    <span class="price-tag">Bs 950</span>
+                    <div class="d-flex justify-content-between mt-3">
+                        <button class="btn btn-primary view-product"
+                            data-name="Robot Araña Bt"
+                            data-price="950"
+                            data-desc="Ideal para empezar con motores y articulaciones."
+                            data-img="img/araña.png">
+                            Ver Más
+                        </button>
+                    </div>
+                </div>
             </div>
 
-            <div class="col-lg-6">
-                <img src="hero-productos.jpg" class="img-fluid rounded-4 shadow" alt="Robots Educativos">
+            <div class="col-md-4 producto-item" data-category="arduino">
+                <div class="product-card">
+                    <img src="img/segu.png" class="product-img">
+                    <h5 class="mt-2">Robot Arduino Seguidor de Linea</h5>
+                    <p>Seguimiento de línea con sensores infrarrojos.</p>
+                    <span class="price-tag">Bs 680</span>
+                    <div class="d-flex justify-content-between mt-3">
+                        <button class="btn btn-primary view-product"
+                            data-name="Robot Arduino Seguidor de Linea"
+                            data-price="680"
+                            data-desc="Robot capaz de seguir líneas con sensores IR de precisión."
+                            data-img="img/segu.png">
+                            Ver Más
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-4 producto-item" data-category="arduino">
+                <div class="product-card">
+                    <img src="img/rem.jpg" class="product-img">
+                    <h5 class="mt-2">Auto a control Remoto Arduino BT</h5>
+                    <p>Auto a control remoto controlado por una APK mediante Bluethoo.</p>
+                    <span class="price-tag">Bs 710</span>
+                    <div class="d-flex justify-content-between mt-3">
+                        <button class="btn btn-primary view-product"
+                            data-name="Auto a control Remoto Arduino BT"
+                            data-price="710"
+                            data-desc="Auto a control remoto controlado por una APK mediante Bluethoo."
+                            data-img="img/rem.jpg">
+                            Ver Más
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- =======================================================
+                 3 ROBOTS ESP32
+            ======================================================== -->
+            <div class="col-md-4 producto-item" data-category="esp32">
+                <div class="product-card">
+                    <img src="img/domo.png" class="product-img">
+                    <h5 class="mt-2">Domotica con Esp32</h5>
+                    <p>Controla luces mediante WiFi por Esp32</p>
+                    <span class="price-tag">Bs 540</span>
+                    <div class="d-flex justify-content-between mt-3">
+                        <button class="btn btn-primary view-product"
+                            data-name="Domotica con Esp32"
+                            data-price="540"
+                            data-desc="Controla luces mediante WiFi por Esp32"
+                            data-img="img/domo.png">
+                            Ver Más
+                        </button>
+
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-4 producto-item" data-category="esp32">
+                <div class="product-card">
+                    <img src="img/auto.jpg" class="product-img">
+                    <h5 class="mt-2">Auto mediante Wifi y EspCam</h5>
+                    <p>Auto controlado por Esp32 mediante WiFi con su Camara.</p>
+                    <span class="price-tag">Bs 780</span>
+                    <div class="d-flex justify-content-between mt-3">
+                        <button class="btn btn-primary view-product"
+                            data-name="Auto mediante Wifi y EspCam"
+                            data-price="780"
+                            data-desc="Auto controlado por Esp32 mediante WiFi con su Camara."
+                            data-img="img/auto.jpg">
+                            Ver Más
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-4 producto-item" data-category="esp32">
+                <div class="product-card">
+                    <img src="img/visi.jpg" class="product-img">
+                    <h5 class="mt-2">Vision Artificial con Esp32</h5>
+                    <p>Reconocimiento de objetos con vision artificial.</p>
+                    <span class="price-tag">Bs 820</span>
+                    <div class="d-flex justify-content-between mt-3">
+                        <button class="btn btn-primary view-product"
+                            data-name="Vision Artificial con Esp32"
+                            data-price="820"
+                            data-desc="Reconocimiento de objetos con vision artificial."
+                            data-img="img/visi.jpg">
+                            Ver Más
+                        </button>
+                    </div>
+                </div>
             </div>
 
         </div>
@@ -63,202 +193,63 @@
 </section>
 
 
-<!-- FILTROS Y PRODUCTOS -->
-<section class="filtros py-5">
-    <div class="container">
-        <div class="row">
 
-            <!-- FILTROS -->
-            <div class="col-lg-4">
-                <div class="filtro-card shadow-sm p-4">
+<!-- ======================================================
+     MODAL EMERGENTE PREMIUM DE PRODUCTO
+====================================================== -->
+<div class="modal fade" id="productModal" tabindex="-1">
+    <div class="modal-dialog modal-lg modal-dialog-centered">
+        <div class="modal-content p-3">
+            <div class="modal-body">
 
-                    <h5>Filtrar por Tecnología</h5>
+                <button class="btn-close ms-auto" data-bs-dismiss="modal"></button>
 
-                    <div class="form-check">
-                        <input type="checkbox" class="form-check-input" id="f-arduino">
-                        <label for="f-arduino" class="form-check-label">Arduino</label>
-                    </div>
-
-                    <div class="form-check">
-                        <input type="checkbox" class="form-check-input" id="f-esp32">
-                        <label for="f-esp32" class="form-check-label">ESP32</label>
-                    </div>
-
-                    <div class="form-check">
-                        <input type="checkbox" class="form-check-input" id="f-sensores">
-                        <label for="f-sensores" class="form-check-label">Sensores</label>
-                    </div>
-
-                    <hr>
-
-                    <h5>Nivel</h5>
-                    <div class="form-check">
-                        <input type="checkbox" class="form-check-input" id="n-principiante">
-                        <label for="n-principiante" class="form-check-label">Principiante</label>
-                    </div>
-
-                    <div class="form-check">
-                        <input type="checkbox" class="form-check-input" id="n-intermedio">
-                        <label for="n-intermedio" class="form-check-label">Intermedio</label>
-                    </div>
-
-                    <hr>
-
-                    <h5>Edad Recomendada</h5>
-
-                    <div class="form-check">
-                        <input type="checkbox" class="form-check-input" id="e-6">
-                        <label for="e-6" class="form-check-label">6-9 años</label>
-                    </div>
-
-                    <div class="form-check">
-                        <input type="checkbox" class="form-check-input" id="e-10">
-                        <label for="e-10" class="form-check-label">10-14 años</label>
-                    </div>
-
-                    <div class="form-check">
-                        <input type="checkbox" class="form-check-input" id="e-15">
-                        <label for="e-15" class="form-check-label">15+ años</label>
-                    </div>
-
-                </div>
-            </div>
-
-
-            <!-- PRODUCTOS -->
-            <div class="col-lg-8">
                 <div class="row g-4">
 
-                    <!-- PRODUCTO 1 -->
                     <div class="col-md-6">
-                        <div class="card producto-card shadow-sm">
-                            <img src="robot1.jpg" class="card-img-top" alt="Robot Explorer Arduino">
-                            <div class="card-body">
-                                <h5 class="card-title">Kit Robot Explorer V1.0 Arduino</h5>
-                                <p class="card-text">
-                                    Aprende electrónica, sensores y programación desde cero.
-                                </p>
-                                <div class="d-flex justify-content-between align-items-center">
-                                    <a href="#" class="btn btn-primary">Ver Detalles</a>
-                                    <span class="badge bg-info">Online</span>
-                                </div>
-                            </div>
-                        </div>
+                        <img id="modalImg" class="w-100 rounded-3 shadow">
                     </div>
 
-                    <!-- PRODUCTO 2 -->
                     <div class="col-md-6">
-                        <div class="card producto-card shadow-sm">
-                            <img src="robot2.jpg" class="card-img-top" alt="Robot Explorer Rabólica">
-                            <div class="card-body">
-                                <h5 class="card-title">Kit Robot Explorer V1.0 Rabólica</h5>
-                                <p class="card-text">
-                                    Proyectos avanzados con módulos sensoriales.
-                                </p>
-                                <div class="d-flex justify-content-between align-items-center">
-                                    <a href="#" class="btn btn-primary">Ver Detalles</a>
-                                    <span class="badge bg-warning text-dark">Comprar Kit</span>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
+                        <h3 id="modalName"></h3>
+                        <h4 class="text-primary fw-bold">Bs <span id="modalPrice"></span></h4>
+                        <p id="modalDesc" class="mt-3"></p>
 
-                    <!-- PRODUCTO 3 -->
-                    <div class="col-md-6">
-                        <div class="card producto-card shadow-sm">
-                            <img src="robot3.jpg" class="card-img-top" alt="Robot Avanzado ESP32">
-                            <div class="card-body">
-                                <h5 class="card-title">Kit Robot Avanzado con ESP32</h5>
-                                <p class="card-text">
-                                    Potencia tus proyectos con WiFi, IA y robótica avanzada.
-                                </p>
-                                <div class="d-flex justify-content-between align-items-center">
-                                    <a href="#" class="btn btn-primary">Ver Detalles</a>
-                                    <span class="badge bg-info">Online</span>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
+                        <div class="mt-4 d-flex gap-3">
+                            <button class="btn btn-success addToCartModal" id="modalAddCart">Realiza tu pedido</button>
 
-                    <!-- PRODUCTO 4 -->
-                    <div class="col-md-6">
-                        <div class="card producto-card shadow-sm">
-                            <img src="robot4.jpg" class="card-img-top" alt="Robot Explorer V3">
-                            <div class="card-body">
-                                <h5 class="card-title">Kit Robot Explorer V3</h5>
-                                <p class="card-text">
-                                    Kit completo con sensores, módulos y cursos avanzados.
-                                </p>
-                                <div class="d-flex justify-content-between align-items-center">
-                                    <a href="#" class="btn btn-primary">Ver Detalles</a>
-                                    <span class="badge bg-warning text-dark">Inscripción Online</span>
-                                </div>
-                            </div>
+                            <a id="modalWhatsapp"
+                               class="btn btn-whatsapp"
+                               target="_blank">
+                                Comprar WhatsApp
+                            </a>
                         </div>
+
                     </div>
 
                 </div>
-            </div>
 
+            </div>
         </div>
     </div>
-</section>
+</div>
 
 
-<!-- EQUIPO -->
-<section class="equipo py-5 bg-dark text-white">
-    <div class="container text-center">
-        <h2 class="mb-5">Conoce a Nuestro Equipo</h2>
 
-        <div class="row justify-content-center g-4">
 
-            <div class="col-md-3">
-                <div class="equipo-card">
-                    <img src="team1.jpg" class="equipo-img mb-3">
-                    <h5>CEO Fundadora</h5>
-                    <p>Asesora Científica</p>
-                </div>
-            </div>
 
-            <div class="col-md-3">
-                <div class="equipo-card">
-                    <img src="team2.jpg" class="equipo-img mb-3">
-                    <h5>CEO Fundador</h5>
-                    <p>Profesor</p>
-                </div>
-            </div>
-
-            <div class="col-md-3">
-                <div class="equipo-card">
-                    <img src="team3.jpg" class="equipo-img mb-3">
-                    <h5>Desarrollador</h5>
-                    <p>Área Robótica</p>
-                </div>
-            </div>
-
-        </div>
-    </div>
-</section>
 
 
 <!-- FOOTER -->
 <footer class="footer py-4">
     <div class="container text-center">
-        <img src="logo-footer.png" class="footer-logo mb-3" alt="Logo Edubotic">
-
-        <div class="nav justify-content-center">
-            <a href="index.html" class="nav-link">Inicio</a>
-            <a href="productos.html" class="nav-link">Robots</a>
-            <a href="cursos.html" class="nav-link">Cursos</a>
-            <a href="sobre-nosotros.html" class="nav-link">Sobre Nosotros</a>
-        </div>
-
         <p class="mt-3">© 2025 EduBotic - Innovación para el Futuro</p>
     </div>
 </footer>
 
 
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
 <script src="script.js"></script>
 
 </body>

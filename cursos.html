@@ -5,35 +5,46 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Cursos - EduBotic</title>
 
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Fuentes -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+
+    <!-- Bootstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Iconos -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+
+    <!-- Estilos -->
     <link rel="stylesheet" href="styles.css">
 </head>
 
 <body>
 
 <!-- NAVBAR -->
-<nav class="navbar navbar-expand-lg bg-white shadow-sm py-2 fixed-top">
-    <div class="container">
+<nav class="navbar navbar-expand-lg fixed-top custom-nav">
+    <div class="container py-2">
 
-        <a class="navbar-brand" href="index.html">
-            <img src="logo.png" class="logo-nav" alt="EduBotic Logo">
+        <a class="navbar-brand d-flex align-items-center fw-bold" href="index.html">
+            <img src="logo.png" class="logo-nav me-2">
+            EduBotic
         </a>
 
         <button class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#nav">
             <span class="navbar-toggler-icon"></span>
         </button>
 
-        <div class="collapse navbar-collapse" id="nav">
-            <ul class="navbar-nav ms-auto">
-                <li class="nav-item"><a href="index.html" class="nav-link">Inicio</a></li>
-                <li class="nav-item"><a href="productos.html" class="nav-link">Robots</a></li>
-                <li class="nav-item"><a href="cursos.html" class="nav-link active">Cursos</a></li>
-                <li class="nav-item"><a href="sobre-nosotros.html" class="nav-link">Sobre Nosotros</a></li>
-                <li class="nav-item"><a href="contacto.html" class="nav-link">Contacto</a></li>
+        <div class="collapse navbar-collapse text-center" id="nav">
+            <ul class="navbar-nav ms-auto gap-3">
+                <li class="nav-item"><a class="nav-link" href="index.html">Inicio</a></li>
+                <li class="nav-item"><a class="nav-link" href="robots.html">Robots</a></li>
+                <li class="nav-item"><a class="nav-link active" href="cursos.html">Cursos</a></li>
+                <li class="nav-item"><a class="nav-link" href="trabajos-web.html">Trabajos Web</a></li>
+                <li class="nav-item"><a class="nav-link" href="sobre-nosotros.html">Sobre Nosotros</a></li>
+                <li class="nav-item"><a class="nav-link" href="contacto.html">Contacto</a></li>
             </ul>
 
-            <a href="https://wa.me/59170000000" class="btn btn-success ms-3">
-                WhatsApp
+            <a href="https://wa.me/59162456246" class="btn btn-whatsapp ms-lg-4">
+                <i class="bi bi-whatsapp me-1"></i> WhatsApp
             </a>
         </div>
 
@@ -42,20 +53,193 @@
 
 
 <!-- HERO -->
-<section class="hero-cursos d-flex align-items-center">
+<header class="hero-cursos2 d-flex align-items-center text-white text-center">
     <div class="container">
-        <div class="row align-items-center">
+        <h1 class="hero-title">Cursos Profesionales</h1>
+        <p class="hero-subtitle">Aprende programación, robótica, diseño y tecnología moderna.</p>
+    </div>
+</header>
 
-            <div class="col-lg-6">
-                <h1 class="hero-title">¡Aprende, Crea, Especialízate e Innova!</h1>
-                <p class="hero-text">Cursos online y presenciales de diseño, Arduino, IA y robótica.</p>
 
-                <a href="productos.html" class="btn btn-primary btn-lg">Explora Robots</a>
-                <a href="cursos.html" class="btn btn-warning btn-lg ms-2">Descubre Cursos</a>
+
+<!-- FILTROS -->
+<section class="py-4 text-center">
+    <button class="filter-btn2 active" data-filter="all">Todos</button>
+    <button class="filter-btn2" data-filter="robotica">Robótica</button>
+    <button class="filter-btn2" data-filter="arduino">Arduino & ESP32</button>
+    <button class="filter-btn2" data-filter="programacion">Programación</button>
+    <button class="filter-btn2" data-filter="diseno">Diseño</button>
+</section>
+
+
+
+<!-- LISTA DE CURSOS -->
+<section class="cursos-section py-5">
+    <div class="container">
+        <div class="row g-4" id="cursosLista">
+
+            <!-- =======================================================
+                 ROBÓTICA
+            ======================================================== -->
+            <div class="col-md-4 curso-item" data-category="robotica">
+                <div class="curso-card2">
+                    <img src="curso-robotica-1.jpg" class="curso-img">
+                    <h5 class="mt-2">Robótica para Principiantes</h5>
+                    <p>Aprende motores, sensores y programación básica.</p>
+                    <span class="badge bg-primary">Bs 150</span>
+
+                    <div class="d-flex justify-content-between mt-3">
+                        <button class="btn btn-primary view-course"
+                            data-name="Robótica para Principiantes"
+                            data-price="150"
+                            data-desc="Curso completo desde cero: motores, sensores, lógica, proyectos prácticos."
+                            data-img="curso-robotica-1.jpg">
+                            Ver Más
+                        </button>
+
+                        <a href="https://wa.me/59162456246?text=Estoy%20interesado%20en%20el%20curso%20de%20Robótica%20para%20Principiantes"
+                           class="btn btn-success">
+                           Inscribirme
+                        </a>
+                    </div>
+                </div>
             </div>
 
-            <div class="col-lg-6">
-                <img src="hero-cursos.jpg" class="img-fluid rounded-4 shadow" alt="Cursos de Robótica">
+
+            <div class="col-md-4 curso-item" data-category="robotica">
+                <div class="curso-card2">
+                    <img src="curso-robotica-2.jpg" class="curso-img">
+                    <h5 class="mt-2">Robótica Avanzada</h5>
+                    <p>Controladores, sensores complejos y algoritmos.</p>
+                    <span class="badge bg-primary">Bs 240</span>
+
+                    <div class="d-flex justify-content-between mt-3">
+                        <button class="btn btn-primary view-course"
+                            data-name="Robótica Avanzada"
+                            data-price="240"
+                            data-desc="Curso avanzado sobre calibración, control, comunicaciones y automatización robótica."
+                            data-img="curso-robotica-2.jpg">
+                            Ver Más
+                        </button>
+
+                        <a href="https://wa.me/59162456246?text=Deseo%20inscribirme%20al%20curso%20de%20Robótica%20Avanzada"
+                           class="btn btn-success">
+                           Inscribirme
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+
+
+            <!-- =======================================================
+                 ARDUINO / ESP32
+            ======================================================== -->
+            <div class="col-md-4 curso-item" data-category="arduino">
+                <div class="curso-card2">
+                    <img src="curso-arduino-1.jpg" class="curso-img">
+                    <h5 class="mt-2">Arduino Desde Cero</h5>
+                    <p>LEDs, sensores, matrices, motores paso a paso.</p>
+                    <span class="badge bg-warning text-dark">Bs 180</span>
+
+                    <div class="d-flex justify-content-between mt-3">
+                        <button class="btn btn-primary view-course"
+                            data-name="Arduino Desde Cero"
+                            data-price="180"
+                            data-desc="Aprende Arduino desde nivel cero hasta proyectos completos. Incluye módulos y ejercicios."
+                            data-img="curso-arduino-1.jpg">
+                            Ver Más
+                        </button>
+
+                        <a href="https://wa.me/59162456246?text=Quiero%20inscribirme%20al%20curso%20de%20Arduino%20Desde%20Cero"
+                           class="btn btn-success">
+                           Inscribirme
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="col-md-4 curso-item" data-category="arduino">
+                <div class="curso-card2">
+                    <img src="curso-esp32-1.jpg" class="curso-img">
+                    <h5 class="mt-2">ESP32 + IoT Profesional</h5>
+                    <p>WiFi, sensores, webservers, APIs, dashboards.</p>
+                    <span class="badge bg-warning text-dark">Bs 260</span>
+
+                    <div class="d-flex justify-content-between mt-3">
+                        <button class="btn btn-primary view-course"
+                            data-name="ESP32 + IoT Profesional"
+                            data-price="260"
+                            data-desc="Conecta sensores, controla dispositivos y crea paneles IoT con ESP32 utilizando websockets y APIs."
+                            data-img="curso-esp32-1.jpg">
+                            Ver Más
+                        </button>
+
+                        <a href="https://wa.me/59162456246?text=Estoy%20listo%20para%20inscribirme%20al%20curso%20ESP32%20IoT%20Profesional"
+                           class="btn btn-success">
+                           Inscribirme
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+
+
+            <!-- =======================================================
+                 PROGRAMACIÓN
+            ======================================================== -->
+            <div class="col-md-4 curso-item" data-category="programacion">
+                <div class="curso-card2">
+                    <img src="curso-python.jpg" class="curso-img">
+                    <h5 class="mt-2">Python Desde Cero</h5>
+                    <p>Bases sólidas, estructuras, funciones, mini proyectos.</p>
+                    <span class="badge bg-info text-dark">Bs 200</span>
+
+                    <div class="d-flex justify-content-between mt-3">
+                        <button class="btn btn-primary view-course"
+                            data-name="Python Desde Cero"
+                            data-price="200"
+                            data-desc="Aprende Python desde cero, desarrolla algoritmos, proyectos y lógica de programación."
+                            data-img="curso-python.jpg">
+                            Ver Más
+                        </button>
+
+                        <a href="https://wa.me/59162456246?text=Me%20interesa%20el%20curso%20Python%20Desde%20Cero"
+                           class="btn btn-success">
+                           Inscribirme
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+
+
+            <!-- =======================================================
+                 DISEÑO
+            ======================================================== -->
+            <div class="col-md-4 curso-item" data-category="diseno">
+                <div class="curso-card2">
+                    <img src="curso-design-1.jpg" class="curso-img">
+                    <h5 class="mt-2">Diseño Gráfico Profesional</h5>
+                    <p>Photoshop, Illustrator, logos y branding.</p>
+                    <span class="badge bg-danger">Bs 220</span>
+
+                    <div class="d-flex justify-content-between mt-3">
+                        <button class="btn btn-primary view-course"
+                            data-name="Diseño Gráfico Profesional"
+                            data-price="220"
+                            data-desc="Domina herramientas de diseño gráfico y crea proyectos profesionales de branding."
+                            data-img="curso-design-1.jpg">
+                            Ver Más
+                        </button>
+
+                        <a href="https://wa.me/59162456246?text=Quisiera%20inscribirme%20al%20curso%20de%20Dise%C3%B1o%20Gr%C3%A1fico%20Profesional"
+                           class="btn btn-success">
+                           Inscribirme
+                        </a>
+                    </div>
+                </div>
             </div>
 
         </div>
@@ -63,183 +247,55 @@
 </section>
 
 
-<!-- FILTROS Y LISTA DE CURSOS -->
-<section class="filtros py-5">
-    <div class="container">
-        <div class="row">
 
-            <!-- FILTROS -->
-            <div class="col-lg-4">
-                <div class="filtro-card p-4 shadow-sm">
+<!-- ======================================================
+     MODAL EMERGENTE DE CURSOS
+====================================================== -->
+<div class="modal fade" id="courseModal" tabindex="-1">
+    <div class="modal-dialog modal-lg modal-dialog-centered">
+        <div class="modal-content p-3">
 
-                    <h5>Filtrar por Tecnología</h5>
-                    <div class="form-check">
-                        <input type="checkbox" class="form-check-input" id="arduino">
-                        <label for="arduino" class="form-check-label">Arduino</label>
-                    </div>
+            <div class="modal-body">
+                <button class="btn-close ms-auto" data-bs-dismiss="modal"></button>
 
-                    <div class="form-check">
-                        <input type="checkbox" class="form-check-input" id="python">
-                        <label for="python" class="form-check-label">Python</label>
-                    </div>
-
-                    <div class="form-check">
-                        <input type="checkbox" class="form-check-input" id="design">
-                        <label for="design" class="form-check-label">Diseño Gráfico</label>
-                    </div>
-
-                    <hr>
-
-                    <h5>Nivel</h5>
-                    <div class="form-check">
-                        <input type="checkbox" class="form-check-input" id="principiante">
-                        <label for="principiante" class="form-check-label">Principiante</label>
-                    </div>
-
-                    <hr>
-
-                    <h5>Edad Recomendada</h5>
-
-                    <div class="form-check">
-                        <input type="checkbox" class="form-check-input" id="e1">
-                        <label for="e1" class="form-check-label">6-9 años</label>
-                    </div>
-
-                    <div class="form-check">
-                        <input type="checkbox" class="form-check-input" id="e2">
-                        <label for="e2" class="form-check-label">10-14 años</label>
-                    </div>
-
-                    <div class="form-check">
-                        <input type="checkbox" class="form-check-input" id="e3">
-                        <label for="e3" class="form-check-label">15+ años</label>
-                    </div>
-
-                </div>
-            </div>
-
-            <!-- CURSOS -->
-            <div class="col-lg-8">
                 <div class="row g-4">
 
                     <div class="col-md-6">
-                        <div class="card curso-card shadow-sm">
-                            <img src="curso1.jpg" class="card-img-top" alt="Curso Arduino">
-                            <div class="card-body">
-                                <h5 class="card-title">Curso Avanzado de Robótica con ESP32</h5>
-                                <p class="card-text">
-                                    Aprende sensores, motores, IoT y programación avanzada.
-                                </p>
-                                <div class="d-flex justify-content-between align-items-center">
-                                    <a href="#" class="btn btn-primary">Ver Detalles</a>
-                                    <span class="badge bg-info">Online</span>
-                                </div>
-                            </div>
-                        </div>
+                        <img id="courseImg" class="w-100 rounded-3 shadow">
                     </div>
 
                     <div class="col-md-6">
-                        <div class="card curso-card shadow-sm">
-                            <img src="curso2.jpg" class="card-img-top" alt="Curso Arduino Niños">
-                            <div class="card-body">
-                                <h5 class="card-title">Kit Robot Explorer V1.0</h5>
-                                <p class="card-text">
-                                    Programa ideal para niños que inician en robótica.
-                                </p>
-                                <div class="d-flex justify-content-between align-items-center">
-                                    <a href="#" class="btn btn-primary">Ver Detalles</a>
-                                    <span class="badge bg-warning text-dark">Inscripción Online</span>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
+                        <h3 id="courseName"></h3>
+                        <h4 class="text-primary fw-bold">Bs <span id="coursePrice"></span></h4>
+                        <p id="courseDesc" class="mt-3"></p>
 
-                    <div class="col-md-6">
-                        <div class="card curso-card shadow-sm">
-                            <img src="curso3.jpg" class="card-img-top" alt="Curso Python Jóvenes">
-                            <div class="card-body">
-                                <h5 class="card-title">Curso de Python para Jóvenes</h5>
-                                <p class="card-text">
-                                    Aprende programación moderna creando juegos y apps.
-                                </p>
-                                <div class="d-flex justify-content-between align-items-center">
-                                    <a href="#" class="btn btn-primary">Ver Detalles</a>
-                                    <span class="badge bg-info">Online</span>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="col-md-6">
-                        <div class="card curso-card shadow-sm">
-                            <img src="curso4.jpg" class="card-img-top" alt="Curso Diseño Gráfico">
-                            <div class="card-body">
-                                <h5 class="card-title">Curso de Diseño Gráfico Creativo</h5>
-                                <p class="card-text">
-                                    Aprende ilustración, edición de fotos y diseño profesional.
-                                </p>
-                                <div class="d-flex justify-content-between align-items-center">
-                                    <a href="#" class="btn btn-primary">Ver Detalles</a>
-                                    <span class="badge bg-info">Online</span>
-                                </div>
-                            </div>
-                        </div>
+                        <a id="courseWhatsapp"  
+                           class="btn btn-success btn-lg w-100 mt-4"
+                           target="_blank">
+                           Inscribirme por WhatsApp
+                        </a>
                     </div>
 
                 </div>
+
             </div>
 
         </div>
     </div>
-</section>
+</div>
 
-
-<!-- EQUIPO -->
-<section class="equipo py-5 bg-dark text-white">
-    <div class="container text-center">
-        <h2 class="mb-5">Conoce a Nuestro Equipo</h2>
-
-        <div class="row justify-content-center g-4">
-
-            <div class="col-md-3">
-                <div class="equipo-card">
-                    <img src="team1.jpg" class="equipo-img mb-3">
-                    <h5>CEO Fundadora</h5>
-                    <p>Asesora Científica</p>
-                </div>
-            </div>
-
-            <div class="col-md-3">
-                <div class="equipo-card">
-                    <img src="team2.jpg" class="equipo-img mb-3">
-                    <h5>CEO Fundador</h5>
-                    <p>Profesor</p>
-                </div>
-            </div>
-
-            <div class="col-md-3">
-                <div class="equipo-card">
-                    <img src="team3.jpg" class="equipo-img mb-3">
-                    <h5>Desarrollador</h5>
-                    <p>Área Robótica</p>
-                </div>
-            </div>
-
-        </div>
-    </div>
-</section>
 
 
 <!-- FOOTER -->
 <footer class="footer py-4">
     <div class="container text-center">
-        <img src="logo-footer.png" class="footer-logo mb-3" alt="Logo Edubotic">
+        <img src="logo-footer.png" class="footer-logo mb-3">
 
-        <div class="nav justify-content-center">
-            <a href="index.html" class="nav-link">Inicio</a>
-            <a href="productos.html" class="nav-link">Robots</a>
-            <a href="cursos.html" class="nav-link">Cursos</a>
-            <a href="sobre-nosotros.html" class="nav-link">Sobre Nosotros</a>
+        <div class="d-flex justify-content-center gap-4">
+            <a href="index.html">Inicio</a>
+            <a href="robots.html">Robots</a>
+            <a href="cursos.html">Cursos</a>
+            <a href="sobre-nosotros.html">Sobre Nosotros</a>
         </div>
 
         <p class="mt-3">© 2025 EduBotic - Innovación para el Futuro</p>
@@ -247,7 +303,7 @@
 </footer>
 
 
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
 <script src="script.js"></script>
 
 </body>
