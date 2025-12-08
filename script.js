@@ -55,32 +55,35 @@ document.querySelectorAll(".view-product").forEach(btn => {
   });
 });
 
-//validacion del formulario y envio al whatsap
 document.getElementById("contactForm")?.addEventListener("submit", e => {
     e.preventDefault();
 
-    // Obtener valores del formulario
     const nombre = document.getElementById("nombre").value;
     const correo = document.getElementById("correo").value;
     const mensaje = document.getElementById("mensaje").value;
 
-    // Número de WhatsApp (cámbialo por el tuyo)
     const telefono = "62456246";
 
-    // Crear mensaje usando encodeURIComponent
     const texto = encodeURIComponent(
         `Hola, soy ${nombre}.\nMi correo es: ${correo}.\n\n${mensaje}`
     );
 
-    // Enlace a WhatsApp
     const url = `https://wa.me/591${telefono}?text=${texto}`;
 
-    // Abrir WhatsApp en nueva pestaña
-    window.open(url, "_blank");
 
-    // Limpiar formulario
+    // Luego la alerta
+    setTimeout(() => {
+        Swal.fire({
+            icon: 'success',
+            title: 'Mensaje enviado',
+            text: 'Tu mensaje ha sido enviado a WhatsApp correctamente.',
+            confirmButtonColor: '#0d6efd'
+        });
+    }, 300); // pequeño retraso para evitar bloqueos
+
     e.target.reset();
 });
+
 
 
 
