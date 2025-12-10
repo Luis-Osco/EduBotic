@@ -70,6 +70,8 @@ document.getElementById("contactForm")?.addEventListener("submit", e => {
 
     const url = `https://wa.me/591${telefono}?text=${texto}`;
 
+    // Primero abre WhatsApp
+    window.open(url, "_blank");
 
     // Luego la alerta
     setTimeout(() => {
