@@ -416,3 +416,13 @@ img {
 .whatsapp-float:hover img {
     transform: scale(1.1);
 }
+
+.footer .social-icons a {
+    color: #ffffff; /* Cambia según tu diseño */
+    transition: 0.3s ease;
+}
+
+.footer .social-icons a:hover {
+    color: #ea7600; /* Color de hover */
+    transform: scale(1.2);
+}
