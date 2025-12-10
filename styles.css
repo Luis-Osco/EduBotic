@@ -426,3 +426,21 @@ img {
     color: #ea7600; /* Color de hover */
     transform: scale(1.2);
 }
+
+/* Top Bar */
+.top-bar {
+    background: #1c4e80; /* Color elegante estilo EduBotic */
+    color: #fff;
+    font-size: 14px;
+}
+
+.top-bar .social-icons a {
+    color: #fff;
+    font-size: 18px;
+    transition: 0.3s ease;
+}
+
+.top-bar .social-icons a:hover {
+    color: #ea7600; /* Color de hover */
+    transform: scale(1.2);
+}
